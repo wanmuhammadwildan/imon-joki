@@ -6,8 +6,6 @@ import Image from "next/image";
 export default function Home() {
   const [selectedPackage, setSelectedPackage] = useState<any>(null);
   const [policyModal, setPolicyModal] = useState<'syarat' | 'privasi' | null>(null);
-  const [checkStatusModal, setCheckStatusModal] = useState(false);
-  const [searchOrderId, setSearchOrderId] = useState("");
   const [isConfirmingOrder, setIsConfirmingOrder] = useState(false);
   const [formData, setFormData] = useState({
     loginVia: "",
@@ -67,8 +65,6 @@ export default function Home() {
         </div>
         <div className="flex gap-8 text-sm font-semibold text-white/70">
           <a href="#services" className="hover:text-brand-primary transition-colors">Harga</a>
-          <a href="#testimonials" className="hover:text-brand-primary transition-colors">Testimoni</a>
-          <button onClick={() => setCheckStatusModal(true)} className="hover:text-brand-primary transition-colors text-sm font-semibold">Cek Status</button>
         </div>
       </nav>
 
@@ -143,36 +139,6 @@ export default function Home() {
                 className="w-full py-2.5 md:py-4 rounded-xl border border-white/10 bg-white/5 font-black hover:bg-brand-primary hover:border-brand-primary hover:text-white transition-all active:scale-95 text-[9px] md:text-base z-10 uppercase tracking-tight">
                 Pilih Paket
               </button>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section id="testimonials" className="z-10 w-full max-w-6xl px-4 mb-24">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-2 italic uppercase">Testimoni Pelanggan</h2>
-          <p className="text-white/40 text-sm md:text-base italic">Apa kata mereka yang sudah menggunakan jasa IMON JOKI?</p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { name: "Andi Wijaya", rank: "Mythical Glory", text: "Proses cepat banget, semalam order pagi udah beres. Rekomendasi banget buat yang mau push rank aman!", color: "from-blue-500/20" },
-            { name: "Siti Rahma", rank: "Legend to Mythic", text: "Awalnya ragu, tapi ternyata amanah 100%. Adminnya fast respon dan sopan. Mantap IMON JOKI!", color: "from-purple-500/20" },
-            { name: "Budi Santoso", rank: "Epic to Legend", text: "Gak sampe seumur jagung udah naik tier. Hero request juga beneran dipake. Thanks bro!", color: "from-orange-500/20" }
-          ].map((testi, i) => (
-            <div key={i} className={`glass p-8 rounded-3xl border-white/5 relative overflow-hidden group hover:border-brand-primary/30 transition-all`}>
-              <div className={`absolute inset-0 bg-gradient-to-br ${testi.color} to-transparent opacity-30 group-hover:opacity-100 transition-opacity -z-10`} />
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <span key={i} className="text-yellow-400">★</span>
-                ))}
-              </div>
-              <p className="text-white/80 italic mb-6 leading-relaxed">"{testi.text}"</p>
-              <div>
-                <p className="text-white font-bold">{testi.name}</p>
-                <p className="text-brand-primary text-xs font-black uppercase tracking-widest">{testi.rank}</p>
-              </div>
             </div>
           ))}
         </div>
@@ -397,57 +363,6 @@ export default function Home() {
                     Batalkan
                   </button>
                 )}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-      {/* Check Status Modal */}
-      {checkStatusModal && (
-        <div className="fixed inset-0 z-[120] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md animate-in fade-in zoom-in duration-300">
-          <div className="glass w-full max-w-md p-8 md:p-10 rounded-[2rem] border-brand-primary/30 relative">
-            <button
-              onClick={() => setCheckStatusModal(false)}
-              className="absolute top-6 right-6 text-white/50 hover:text-white text-3xl transition-colors"
-            >
-              &times;
-            </button>
-
-            <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-black text-white italic uppercase tracking-tight mb-2">Cek Status Pesanan</h3>
-              <p className="text-white/40 text-xs md:text-sm italic">Masukkan ID pesanan Anda untuk melihat progress</p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="space-y-2">
-                <input
-                  type="text"
-                  placeholder="Contoh: IMON-2024XXXX"
-                  value={searchOrderId}
-                  onChange={(e) => setSearchOrderId(e.target.value)}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white outline-none focus:border-brand-primary transition-all text-center font-bold tracking-widest placeholder:tracking-normal placeholder:font-normal"
-                />
-              </div>
-
-              <button
-                onClick={() => {
-                  if (!searchOrderId) return;
-                  alert("Pesanan ditemukan! Status: Sedang Proses oleh Tim Pro Player IMON JOKI.");
-                }}
-                className="w-full py-4 bg-brand-primary text-white hover:bg-brand-primary/80 rounded-xl font-black transition-all shadow-lg shadow-brand-primary/20 uppercase tracking-widest active:scale-95"
-              >
-                Cari Pesanan
-              </button>
-
-              <div className="p-4 rounded-xl bg-white/5 border border-white/10 text-center">
-                <p className="text-[10px] md:text-xs text-white/40 mb-2 italic">Kesulitan menemukan ID pesanan?</p>
-                <a
-                  href="https://wa.me/62881036365793"
-                  target="_blank"
-                  className="text-brand-primary font-black text-[10px] md:text-xs uppercase hover:underline"
-                >
-                  Hubungi Admin Lewat WA
-                </a>
               </div>
             </div>
           </div>
