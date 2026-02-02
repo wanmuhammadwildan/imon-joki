@@ -6,6 +6,7 @@ import Image from "next/image";
 export default function Home() {
   const [selectedPackage, setSelectedPackage] = useState<any>(null);
   const [policyModal, setPolicyModal] = useState<'syarat' | 'privasi' | null>(null);
+  const [isConfirmingOrder, setIsConfirmingOrder] = useState(false);
   const [formData, setFormData] = useState({
     loginVia: "",
     userIdNickname: "",
@@ -26,6 +27,11 @@ export default function Home() {
   ];
 
   const handleOrder = () => {
+    setIsConfirmingOrder(true);
+    setPolicyModal('syarat');
+  };
+
+  const finalizeWhatsAppOrder = () => {
     const total = selectedPackage.price * formData.stars;
     const message = `Halo IMON JOKI! Saya mau order joki:%0A%0A` +
       `*FORMAT ORDER JOKI*%0A` +
@@ -41,6 +47,9 @@ export default function Home() {
       `------------------------%0A` +
       `*Total Pembayaran:* Rp ${total.toLocaleString()}`;
     window.open(`https://wa.me/62881036365793?text=${message}`, "_blank");
+    setPolicyModal(null);
+    setIsConfirmingOrder(false);
+    setSelectedPackage(null);
   };
 
   return (
@@ -333,11 +342,29 @@ export default function Home() {
 
               <div className="pt-8 border-t border-white/5">
                 <button
-                  onClick={() => setPolicyModal(null)}
-                  className="w-full py-4 bg-white/5 hover:bg-white/10 rounded-xl font-bold text-white transition-all outline-none"
+                  onClick={() => {
+                    if (isConfirmingOrder && policyModal === 'syarat') {
+                      finalizeWhatsAppOrder();
+                    } else {
+                      setPolicyModal(null);
+                      setIsConfirmingOrder(false);
+                    }
+                  }}
+                  className="w-full py-4 bg-brand-primary text-white hover:bg-brand-primary/80 rounded-xl font-black transition-all outline-none uppercase tracking-wider"
                 >
-                  Saya Mengerti
+                  {isConfirmingOrder && policyModal === 'syarat' ? 'Setujui & Kirim Pesanan' : 'Saya Mengerti'}
                 </button>
+                {isConfirmingOrder && (
+                  <button
+                    onClick={() => {
+                      setPolicyModal(null);
+                      setIsConfirmingOrder(false);
+                    }}
+                    className="w-full mt-4 py-2 text-white/50 hover:text-white text-xs font-bold transition-colors"
+                  >
+                    Batalkan
+                  </button>
+                )}
               </div>
             </div>
           </div>
