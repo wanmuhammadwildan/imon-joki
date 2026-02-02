@@ -62,8 +62,8 @@ export default function Home() {
       </nav>
 
       {/* Hero Banner Section */}
-      <section className="z-10 w-full max-w-6xl px-4 mb-20">
-        <div className="relative w-full aspect-[21/9] md:aspect-[2.5/1] rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group">
+      <section className="z-10 w-full max-w-6xl px-4 mb-16 md:mb-20">
+        <div className="relative w-full aspect-[16/10] md:aspect-[2.5/1] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl group">
           {/* Background Hero Image */}
           <div className="absolute inset-0">
             <Image
@@ -79,20 +79,20 @@ export default function Home() {
           </div>
 
           {/* Banner Content */}
-          <div className="absolute inset-0 flex items-center justify-start px-8 md:px-16 lg:px-24">
-            <div className="max-w-lg text-left space-y-4 md:space-y-6">
-              <div className="inline-block px-3 py-1 rounded-md bg-yellow-500 text-black text-[10px] md:text-xs font-black uppercase tracking-widest animate-pulse">
+          <div className="absolute inset-0 flex items-center justify-start px-6 md:px-16 lg:px-24">
+            <div className="max-w-xs md:max-w-lg text-left space-y-3 md:space-y-6">
+              <div className="inline-block px-2 py-1 rounded-md bg-yellow-500 text-black text-[8px] md:text-xs font-black uppercase tracking-widest animate-pulse">
                 Terpercaya & Cepat
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-black leading-none text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] uppercase italic">
+              <h1 className="text-xl md:text-5xl lg:text-6xl font-black leading-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] uppercase italic">
                 <span className="text-yellow-400">PUSH RANK</span> <br />
                 <span className="text-white">TANPA LOSE STREAK</span>
               </h1>
-              <p className="text-sm md:text-base text-white/90 font-medium max-w-md hidden sm:block">
+              <p className="text-[10px] md:text-base text-white/90 font-medium max-w-md hidden sm:block">
                 Dapatkan rank impianmu sekarang. Tim pro player kami siap membantu kamu naik dengan cepat dan aman.
               </p>
-              <div className="flex gap-4 justify-start pt-2">
-                <a href="#services" className="px-6 py-3 bg-yellow-500 text-black rounded-lg font-black text-xs md:text-sm hover:scale-105 transition-all shadow-lg shadow-yellow-500/20 active:scale-95 uppercase">
+              <div className="flex gap-4 justify-start pt-1 md:pt-2">
+                <a href="#services" className="px-4 py-2 md:px-6 md:py-3 bg-yellow-500 text-black rounded-lg font-black text-[10px] md:text-sm hover:scale-105 transition-all shadow-lg shadow-yellow-500/20 active:scale-95 uppercase">
                   Order Sekarang
                 </a>
               </div>
@@ -110,13 +110,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 text-white">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 text-white">
           {rankServices.map((service) => (
-            <div key={service.id} className="glass group p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border-white/5 hover:border-brand-primary/30 transition-all hover:translate-y-[-8px] flex flex-col items-center text-center relative overflow-hidden">
+            <div key={service.id} className="glass group p-4 md:p-8 rounded-2xl md:rounded-[2rem] border-white/5 hover:border-brand-primary/30 transition-all hover:translate-y-[-8px] flex flex-col items-center text-center relative overflow-hidden">
               {/* Background Rank Glow */}
               <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-3xl -z-10`} />
 
-              <div className="w-28 h-28 md:w-36 md:h-36 relative mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-500">
+              <div className="w-20 h-20 md:w-36 md:h-36 relative mb-3 md:mb-6 group-hover:scale-110 transition-transform duration-500">
                 <Image
                   src={service.image}
                   alt={service.rank}
@@ -125,11 +125,11 @@ export default function Home() {
                 />
               </div>
 
-              <h4 className="text-lg md:text-xl font-bold mb-1 md:mb-2 uppercase tracking-wide group-hover:text-brand-primary transition-colors">{service.rank}</h4>
-              <p className="text-brand-primary font-black text-base md:text-lg mb-4 md:mb-6">{service.priceText}</p>
+              <h4 className="text-[10px] sm:text-base md:text-xl font-bold mb-1 md:mb-2 uppercase tracking-wide group-hover:text-brand-primary transition-colors line-clamp-1">{service.rank}</h4>
+              <p className="text-brand-primary font-black text-[10px] sm:text-sm md:text-lg mb-3 md:mb-6">{service.priceText}</p>
               <button
                 onClick={() => setSelectedPackage(service)}
-                className="w-full py-3 md:py-4 rounded-xl border border-white/10 bg-white/5 font-bold hover:bg-brand-primary hover:border-brand-primary hover:text-white transition-all active:scale-95 text-sm md:text-base z-10">
+                className="w-full py-2.5 md:py-4 rounded-xl border border-white/10 bg-white/5 font-black hover:bg-brand-primary hover:border-brand-primary hover:text-white transition-all active:scale-95 text-[9px] md:text-base z-10 uppercase tracking-tight">
                 Pilih Paket
               </button>
             </div>
