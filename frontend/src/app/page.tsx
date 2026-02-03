@@ -178,14 +178,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-1 z-20 relative bg-[#0E1016]/90 backdrop-blur-md -mt-4 py-2 px-4 rounded-xl border border-white/5 shadow-2xl w-full translate-y-2">
+              <div className="space-y-1 z-20 relative bg-[#0E1016]/90 backdrop-blur-md -mt-4 py-2 px-3 rounded-xl border border-white/5 shadow-2xl w-full translate-y-2">
                 <h4 className="text-[10px] md:text-2xl font-black uppercase italic tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 drop-shadow-md">{service.rank}</h4>
-                <p className="text-cyan-400 font-bold text-[9px] md:text-lg tracking-wide">{service.priceText}</p>
+                <p className="text-cyan-400 font-bold text-[8px] md:text-lg tracking-wide">{service.priceText}</p>
               </div>
 
               <button
                 onClick={() => setSelectedPackage(service)}
-                className="w-full py-4 md:py-7 rounded-xl md:rounded-[1.5rem] bg-[#1C1F2A] text-white font-black hover:bg-cyan-500 hover:text-black transition-all duration-300 active:scale-95 text-[10px] md:text-base uppercase tracking-[0.2em] md:tracking-[0.25em] z-10 border border-white/5 shadow-2xl group-hover:shadow-cyan-500/20 mt-6 md:mt-8">
+                className="w-full py-3.5 md:py-7 rounded-xl md:rounded-[1.5rem] bg-[#1C1F2A] text-white font-black hover:bg-cyan-500 hover:text-black transition-all duration-300 active:scale-95 text-[10px] md:text-base uppercase tracking-[0.15em] md:tracking-[0.25em] z-10 border border-white/5 shadow-2xl group-hover:shadow-cyan-500/20 mt-6 md:mt-8">
                 Pilih
               </button>
             </div>
