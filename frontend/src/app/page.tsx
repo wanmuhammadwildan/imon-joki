@@ -195,18 +195,18 @@ export default function Home() {
 
       {/* Modal/Form Section */}
       {selectedPackage && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-300 overflow-x-hidden">
-          <div className="bg-[#12141C] w-[94%] md:w-full max-w-2xl p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[90vh] shadow-[0_0_80px_rgba(0,0,0,0.9)] custom-scrollbar">
-            <div className="absolute top-4 right-4 md:top-8 md:right-8 p-2">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 bg-black/95 backdrop-blur-md animate-in fade-in duration-300 overflow-x-hidden">
+          <div className="bg-[#12141C] w-[96%] md:w-full max-w-2xl p-10 md:p-20 rounded-[3rem] md:rounded-[5rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[92vh] shadow-[0_0_100px_rgba(0,0,0,0.9)] custom-scrollbar">
+            <div className="absolute top-6 right-6 md:top-10 md:right-12 p-2">
               <button
                 onClick={() => setSelectedPackage(null)}
-                className="text-white/30 hover:text-white transition-colors text-4xl md:text-5xl"
+                className="text-white/30 hover:text-white transition-colors text-5xl md:text-6xl"
               >
                 &times;
               </button>
             </div>
 
-            <h3 className="text-3xl md:text-5xl font-black text-white mb-10 md:mb-14 uppercase italic tracking-tight pl-8 md:pl-10 pt-14 md:pt-20 pr-4">Data Pesanan</h3>
+            <h3 className="text-3xl md:text-6xl font-black text-white mb-12 md:mb-16 uppercase italic tracking-tight text-center pt-8 md:pt-10 px-4">Data Pesanan</h3>
 
             <div className="space-y-5">
               <div className="p-6 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 mb-2">
