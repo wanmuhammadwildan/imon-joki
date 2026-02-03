@@ -195,8 +195,8 @@ export default function Home() {
 
       {/* Modal/Form Section */}
       {selectedPackage && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 md:p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-300">
-          <div className="bg-[#12141C] w-full max-w-md p-6 md:p-10 rounded-2xl md:rounded-[2.5rem] border border-cyan-500/20 relative overflow-y-auto max-h-[95vh] shadow-2xl custom-scrollbar">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/95 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="bg-[#12141C] w-full max-w-lg p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-cyan-500/20 relative overflow-y-auto max-h-[90vh] shadow-2xl custom-scrollbar">
             <div className="absolute top-0 right-0 p-6">
               <button
                 onClick={() => setSelectedPackage(null)}
@@ -206,12 +206,12 @@ export default function Home() {
               </button>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-8 uppercase italic tracking-tight pl-1">Data Pesanan</h3>
+            <h3 className="text-3xl md:text-4xl font-black text-white mb-10 uppercase italic tracking-tight pl-1 pt-4">Data Pesanan</h3>
 
             <div className="space-y-5">
-              <div className="p-5 rounded-2xl bg-cyan-500/5 border border-cyan-500/20">
+              <div className="p-6 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 mb-2">
                 <p className="text-[10px] text-cyan-400 font-bold uppercase tracking-widest mb-1">Paket Terpilih</p>
-                <p className="text-xl font-black text-white uppercase italic">{selectedPackage.rank}</p>
+                <p className="text-2xl font-black text-white uppercase italic">{selectedPackage.rank}</p>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -260,14 +260,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-[11px] font-bold text-white/40 uppercase tracking-wider ml-1">Request Hero</label>
                   <input
                     type="text"
                     placeholder="Gusion, Chou, Fanny"
                     onChange={(e) => setFormData({ ...formData, requestHero: e.target.value })}
-                    className="w-full bg-[#1C1F2A] border border-white/5 rounded-xl px-4 py-4 text-white outline-none focus:border-cyan-500 transition-all text-sm shadow-inner placeholder:text-white/20"
+                    className="w-full bg-[#1C1F2A] border border-white/5 rounded-xl px-5 py-5 text-white outline-none focus:border-cyan-500 transition-all text-sm shadow-inner placeholder:text-white/20"
                   />
                 </div>
                 <div className="space-y-2">
@@ -277,7 +277,7 @@ export default function Home() {
                     min="1"
                     defaultValue="1"
                     onChange={(e) => setFormData({ ...formData, stars: parseInt(e.target.value) || 1 })}
-                    className="w-full bg-[#1C1F2A] border border-white/5 rounded-xl px-4 py-4 text-white outline-none focus:border-cyan-500 transition-all text-sm shadow-inner"
+                    className="w-full bg-[#1C1F2A] border border-white/5 rounded-xl px-5 py-5 text-white outline-none focus:border-cyan-500 transition-all text-sm shadow-inner"
                   />
                 </div>
               </div>
