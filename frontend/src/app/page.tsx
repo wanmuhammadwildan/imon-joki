@@ -111,8 +111,8 @@ export default function Home() {
       </div>
 
       {/* Hero Banner Section */}
-      <section className="z-10 w-full mb-12 md:mb-24">
-        <div className="relative w-full aspect-[1.2/1] md:aspect-[3/1] lg:aspect-[3.5/1] overflow-hidden border-y border-white/5 group">
+      <section className="z-10 w-full max-w-[1400px] px-4 md:px-12 mb-12 md:mb-24">
+        <div className="relative w-full aspect-[1.8/1] md:aspect-[3/1] lg:aspect-[3.5/1] rounded-2xl md:rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group">
           {/* Background Hero Image */}
           <div className="absolute inset-0">
             <Image
@@ -132,15 +132,15 @@ export default function Home() {
               <div className="inline-block px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-[10px] md:text-sm font-black uppercase tracking-[0.2em]">
                 Terpercaya & Cepat
               </div>
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] uppercase italic">
+              <h1 className="text-xl md:text-5xl lg:text-7xl font-black leading-tight text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] uppercase italic">
                 <span className="text-cyan-400">PUSH RANK</span> <br />
                 <span className="text-white">TANPA LOSE STREAK</span>
               </h1>
-              <p className="text-xs md:text-lg text-white/70 font-medium max-w-sm md:max-w-lg">
+              <p className="text-[10px] md:text-lg text-white/70 font-medium max-w-[280px] md:max-w-lg">
                 Dapatkan rank impianmu sekarang. Tim pro player kami siap membantu kamu naik dengan cepat dan aman.
               </p>
               <div className="flex gap-4 justify-center pt-1 md:pt-2">
-                <a href="#services" className="px-8 py-4 md:px-14 md:py-6 bg-cyan-500 text-black rounded-xl font-black text-sm md:text-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/40 active:scale-95 uppercase tracking-tight">
+                <a href="#services" className="px-6 py-3 md:px-14 md:py-6 bg-cyan-500 text-black rounded-xl font-black text-[10px] md:text-xl hover:scale-105 transition-all shadow-xl shadow-cyan-500/40 active:scale-95 uppercase tracking-tight">
                   Order Sekarang
                 </a>
               </div>
@@ -156,12 +156,12 @@ export default function Home() {
           <div className="h-1.5 w-24 bg-cyan-500 rounded-full mx-auto lg:mx-0"></div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 text-white">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-10 text-white">
           {rankServices.map((service) => (
-            <div key={service.id} className="bg-[#0E1016] group p-8 md:p-12 rounded-[2.5rem] border border-white/5 hover:border-cyan-500/40 transition-all duration-500 hover:translate-y-[-10px] flex flex-col items-center text-center relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+            <div key={service.id} className="bg-[#0E1016] group p-4 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem] border border-white/5 hover:border-cyan-500/40 transition-all duration-500 hover:translate-y-[-10px] flex flex-col items-center text-center relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
 
-              <div className="flex items-center justify-center mb-6 h-48 md:h-64 group-hover:scale-105 transition-transform duration-700 ease-out z-10">
-                <div className="relative w-48 h-48 md:w-64 md:h-64">
+              <div className="flex items-center justify-center mb-4 h-32 md:h-64 group-hover:scale-105 transition-transform duration-700 ease-out z-10">
+                <div className="relative w-32 h-32 md:w-64 md:h-64">
                   {/* Square Decorative Frame */}
                   <div className="absolute inset-0 rounded-[2rem] border border-white/10 group-hover:border-cyan-500/40 transition-all duration-500 shadow-2xl overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
@@ -178,15 +178,15 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="space-y-1 z-20 relative bg-[#0E1016]/80 backdrop-blur-sm -mt-4 py-2 px-4 rounded-xl border border-white/5 shadow-2xl">
-                <h4 className="text-xl md:text-2xl font-black uppercase italic tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 drop-shadow-md">{service.rank}</h4>
-                <p className="text-cyan-400 font-bold text-sm md:text-lg tracking-wide">{service.priceText}</p>
+              <div className="space-y-1 z-20 relative bg-[#0E1016]/80 backdrop-blur-sm -mt-3 py-1.5 px-3 rounded-lg border border-white/5 shadow-2x">
+                <h4 className="text-xs md:text-2xl font-black uppercase italic tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 drop-shadow-md">{service.rank}</h4>
+                <p className="text-cyan-400 font-bold text-[8px] md:text-lg tracking-wide">{service.priceText}</p>
               </div>
 
               <button
                 onClick={() => setSelectedPackage(service)}
-                className="w-full py-6 md:py-7 rounded-[1.5rem] bg-[#1C1F2A] text-white font-black hover:bg-cyan-500 hover:text-black transition-all duration-300 active:scale-95 text-sm md:text-base uppercase tracking-[0.25em] z-10 border border-white/5 shadow-2xl group-hover:shadow-cyan-500/20">
-                Pilih Paket
+                className="w-full py-4 md:py-7 rounded-xl md:rounded-[1.5rem] bg-[#1C1F2A] text-white font-black hover:bg-cyan-500 hover:text-black transition-all duration-300 active:scale-95 text-[9px] md:text-base uppercase tracking-[0.15em] md:tracking-[0.25em] z-10 border border-white/5 shadow-2xl group-hover:shadow-cyan-500/20 mt-4">
+                Pilih
               </button>
             </div>
           ))}
