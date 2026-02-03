@@ -92,15 +92,15 @@ export default function Home() {
       <div className="absolute bottom-[-5%] right-[-10%] w-[60%] h-[60%] bg-purple-600/5 rounded-full blur-[150px]" />
 
       {/* Lightning Effects */}
-      <div className="fixed top-0 left-0 w-1 md:w-2 h-screen bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-40 blur-sm z-0 shadow-[0_0_40px_rgba(34,211,238,0.8)] animate-pulse hidden md:block" />
-      <div className="fixed top-0 left-0 w-[2px] h-screen bg-white opacity-60 z-0 blur-[1px] animate-pulse hidden md:block" />
+      <div className="fixed top-0 left-0 w-1 md:w-2 h-screen bg-gradient-to-b from-transparent via-cyan-400 to-transparent opacity-40 blur-sm z-0 shadow-[0_0_40px_rgba(34,211,238,0.8)] animate-pulse" />
+      <div className="fixed top-0 left-0 w-[2px] h-screen bg-white opacity-60 z-0 blur-[1px] animate-pulse" />
 
-      <div className="fixed top-0 right-0 w-1 md:w-2 h-screen bg-gradient-to-b from-transparent via-orange-500 to-transparent opacity-40 blur-sm z-0 shadow-[0_0_40px_rgba(249,115,22,0.8)] animate-pulse hidden md:block" />
-      <div className="fixed top-0 right-0 w-[2px] h-screen bg-white opacity-60 z-0 blur-[1px] animate-pulse hidden md:block" />
+      <div className="fixed top-0 right-0 w-1 md:w-2 h-screen bg-gradient-to-b from-transparent via-orange-500 to-transparent opacity-40 blur-sm z-0 shadow-[0_0_40px_rgba(249,115,22,0.8)] animate-pulse" />
+      <div className="fixed top-0 right-0 w-[2px] h-screen bg-white opacity-60 z-0 blur-[1px] animate-pulse" />
 
       {/* Lightning Strike Sparkles */}
-      <div className="fixed top-[20%] left-0 w-32 h-64 bg-cyan-400/20 blur-[100px] animate-pulse pointer-events-none" />
-      <div className="fixed bottom-[20%] right-0 w-32 h-64 bg-orange-500/20 blur-[100px] animate-pulse pointer-events-none" />
+      <div className="fixed top-[20%] left-0 w-24 md:w-32 h-64 bg-cyan-400/20 blur-[80px] md:blur-[100px] animate-pulse pointer-events-none" />
+      <div className="fixed bottom-[20%] right-0 w-24 md:w-32 h-64 bg-orange-500/20 blur-[80px] md:blur-[100px] animate-pulse pointer-events-none" />
 
       <div className="w-full max-w-6xl px-6 md:px-12">
         <nav className="z-20 w-full flex justify-between items-center py-6 px-8 glass rounded-2xl mb-12 border-brand-primary/20 bg-black/40 backdrop-blur-md">
@@ -111,8 +111,8 @@ export default function Home() {
       </div>
 
       {/* Hero Banner Section */}
-      <section className="z-10 w-full mb-16 md:mb-24">
-        <div className="relative w-full aspect-[2/1] md:aspect-[3/1] lg:aspect-[3.5/1] overflow-hidden border-y border-white/5 group">
+      <section className="z-10 w-full mb-12 md:mb-24">
+        <div className="relative w-full aspect-[1.2/1] md:aspect-[3/1] lg:aspect-[3.5/1] overflow-hidden border-y border-white/5 group">
           {/* Background Hero Image */}
           <div className="absolute inset-0">
             <Image
@@ -132,11 +132,11 @@ export default function Home() {
               <div className="inline-block px-4 py-1.5 md:px-6 md:py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 text-[10px] md:text-sm font-black uppercase tracking-[0.2em]">
                 Terpercaya & Cepat
               </div>
-              <h1 className="text-xl md:text-5xl lg:text-7xl font-black leading-tight text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)] uppercase italic">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-black leading-tight text-white drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)] uppercase italic">
                 <span className="text-cyan-400">PUSH RANK</span> <br />
                 <span className="text-white">TANPA LOSE STREAK</span>
               </h1>
-              <p className="text-[10px] md:text-lg text-white/70 font-medium max-w-lg hidden sm:block">
+              <p className="text-xs md:text-lg text-white/70 font-medium max-w-sm md:max-w-lg">
                 Dapatkan rank impianmu sekarang. Tim pro player kami siap membantu kamu naik dengan cepat dan aman.
               </p>
               <div className="flex gap-4 justify-center pt-1 md:pt-2">
