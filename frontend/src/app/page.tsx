@@ -196,7 +196,7 @@ export default function Home() {
       {/* Modal/Form Section */}
       {selectedPackage && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-300 overflow-x-hidden">
-          <div className="bg-[#12141C] w-[92%] md:w-full max-w-xl p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[90vh] shadow-[0_0_80px_rgba(0,0,0,0.9)] custom-scrollbar">
+          <div className="bg-[#12141C] w-[94%] md:w-full max-w-2xl p-8 md:p-16 rounded-[2.5rem] md:rounded-[4rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[90vh] shadow-[0_0_80px_rgba(0,0,0,0.9)] custom-scrollbar">
             <div className="absolute top-4 right-4 md:top-8 md:right-8 p-2">
               <button
                 onClick={() => setSelectedPackage(null)}
@@ -206,7 +206,7 @@ export default function Home() {
               </button>
             </div>
 
-            <h3 className="text-3xl md:text-5xl font-black text-white mb-10 md:mb-14 uppercase italic tracking-tight pl-2 pt-10 md:pt-12 pr-4">Data Pesanan</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-white mb-10 md:mb-14 uppercase italic tracking-tight pl-8 md:pl-10 pt-14 md:pt-20 pr-4">Data Pesanan</h3>
 
             <div className="space-y-5">
               <div className="p-6 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 mb-2">
