@@ -196,17 +196,17 @@ export default function Home() {
       {/* Modal/Form Section */}
       {selectedPackage && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-300 overflow-x-hidden">
-          <div className="bg-[#12141C] w-[92%] md:w-full max-w-xl p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[90vh] shadow-[0_0_80px_rgba(0,0,0,0.8)] custom-scrollbar">
-            <div className="absolute top-0 right-0 p-6">
+          <div className="bg-[#12141C] w-[92%] md:w-full max-w-xl p-8 md:p-14 rounded-[2.5rem] md:rounded-[4rem] border border-cyan-500/20 relative overflow-y-auto overflow-x-hidden max-h-[90vh] shadow-[0_0_80px_rgba(0,0,0,0.9)] custom-scrollbar">
+            <div className="absolute top-4 right-4 md:top-8 md:right-8 p-2">
               <button
                 onClick={() => setSelectedPackage(null)}
-                className="text-white/30 hover:text-white transition-colors text-3xl"
+                className="text-white/30 hover:text-white transition-colors text-4xl md:text-5xl"
               >
                 &times;
               </button>
             </div>
 
-            <h3 className="text-3xl md:text-5xl font-black text-white mb-8 md:mb-12 uppercase italic tracking-tight pl-4 pt-6 pr-4">Data Pesanan</h3>
+            <h3 className="text-3xl md:text-5xl font-black text-white mb-10 md:mb-14 uppercase italic tracking-tight pl-2 pt-10 md:pt-12 pr-4">Data Pesanan</h3>
 
             <div className="space-y-5">
               <div className="p-6 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 mb-2">
